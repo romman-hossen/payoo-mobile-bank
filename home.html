@@ -23,23 +23,26 @@
 
 </head>
 <body class="min-h-screen max-w-[450px] mx-auto bg-base-200">
-    <div class="w-[200px] mx-auto pt-52">
-        <img src="./assets/Logo-full.png" alt="">
-    </div>
-    <div class="form mt-8">
-     <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-2xl">
-      <div class="card-body">
-        <fieldset class="fieldset">
-          <label class="label font-medium text-neutral">Mobile Number</label>
-          <input id="input-number" type="text" class="input bg-base-200 rounded-full border-none focus:outline-none" maxlength="11" minlength="11" placeholder="Enter your number" value="01760320585" />
-          <label class="label font-medium text-neutral">4 Digit Pin</label>
-          <input id="input-pin" type="password" class="input bg-base-200 rounded-full border-none focus:outline-none" maxlength="4" minlength="4" placeholder="Enter 4 Digit Pin" />
-          <button id="login-btn" class="btn btn-primary rounded-full mt-4">Login</button>
-        </fieldset>
-      </div>
-    </div>
-    </div>
-    
-    <script src="./script/script.js"></script>
+    <header class="border-b-1 border-gray-300 shadow">
+        <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
+            <div class="left flex gap-2">
+                <div class="logo w-[60px]">
+                    <img src="./assets/logo.png" alt="">
+                </div>
+                <div class="ballence">
+                    <h2 class="font-extrabold">$<span id="ballence">45000</span></h2>
+                    <p class="text-neutral/50">Available Balance</p>
+
+                </div>
+            </div>
+            <div class="right">
+                <a href="./index.html" class="btn rounded-lg text-neutral/50"><span><i class="fa-solid fa-arrow-right-from-bracket"></i></span>Log Out</a>
+            </div>
+        </section>
+    </header>
+    <section>
+        
+    </section>
+
 </body>
 </html>
