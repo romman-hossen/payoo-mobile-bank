@@ -8,24 +8,22 @@
     // 2-get the amount,validate,convert the number
     const cashoutAmount = getValueFormInput("cashout-amount");
      // 3-get the current Ballance,validate,convert the number
-    const ballanceElement = document.getElementById("ballence");
-    const ballance = ballanceElement.innerText;
-    console.log(ballance);
-
+    // console.log('value',ballance);
+    const currentBallance = getBallance();
+    console.log(currentBallance);
     // 4- calculate new ballance 
-    const newBallance = Number(ballance) - Number(cashoutAmount);
+    const newBallance = currentBallance - Number(cashoutAmount);
     console.log(newBallance);
     if(newBallance < 0){
         alert("Invalid amount");
         return;
-
     }
      // 5-get the pin and verify
      const cashoutPin = getValueFormInput("cashout-pin");
      if(cashoutPin === "1234"){
         alert("cashout successful");
         console.log("New ballance :",newBallance);
-        ballanceElement.innerText = newBallance;
+        setBallance(newBallance);
      }
      else{
         alert("Invalid Pin");
