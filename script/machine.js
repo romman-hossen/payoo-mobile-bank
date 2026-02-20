@@ -18,3 +18,19 @@ function setBallance(value){
    const ballanceElement = document.getElementById("ballance");
    ballanceElement.innerText = value;
 }
+// machine id > hide all > show all 
+function showOnly(id){
+    const addMoney = document.getElementById("add-money");
+    const cashout = document.getElementById("cashout");
+
+    // hide every from 
+    addMoney.classList.add("hidden");
+    cashout.classList.add("hidden");
+
+    // show only clicked item 
+    const selected = document.getElementById(id);
+    selected.classList.remove("hidden")
+
+
+
+}
