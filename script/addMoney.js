@@ -18,9 +18,18 @@ document.getElementById("add-money-btn").addEventListener('click',function(){
     // console.log(newBallance)
     const pin = getValueFormInput("add-money-pin");
     if(pin === "1234"){
-       alert(`Add money success from ${selectBank}
+       alert(`Add money success from 
+        ${selectBank}
          ${new Date()}`);
-       document.getElementById("ballance").innerText = newBallance;    
+      setBallance(newBallance); 
+     const history = document.getElementById("history-container");
+     const newHistory = document.createElement("div");
+     newHistory.innerHTML =`
+      <div class="transaction-card p-5 bg-base-100 rounded-xl">
+      Add Money Success from  ${selectBank},account number ${bankAmountNumber} at ${new Date()};    
+     </div>
+     `
+     history.append(newHistory)
     }
     else{
         alert("Invalid Pin")
